@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
-    
-</head>
-<body>
-    <div>Player Score <span id="player-score">0</span></div>
-    <div>Computer Score <span id="computer-score">0</span></div>
-    <div>
+  </head>
+  <body>
+    <div class="container">
+      <div id="score-container"">
+        <div>Player Score: <span id="player-score">0</span></div>
+        <div>Computer Score: <span id="computer-score">0</span></div>
+      </div>
+      <div id="result"></div>
+      <div id="button-group">
         <button type="button" id="rock">Rock</button>
         <button type="button" id="paper">Paper</button>
         <button type="button" id="scissors">Scissors</button>
+      </div>
     </div>
-    <div id="result"></div>
     <script src="script.js" defer></script>
-</body>
+  </body>
 </html>
