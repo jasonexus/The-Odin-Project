@@ -31,18 +31,16 @@ window.onload = function () {
 };
 
 function endGame(nodeVal) {
-  if (roundCounter == 5) {
+  if (humanScore == 5) {
+    nodeVal.nodeValue = "Player wins the game!";
     rock.style.display = "none";
     paper.style.display = "none";
     scissors.style.display = "none";
-
-    if (humanScore > computerScore) {
-      nodeVal.nodeValue = "Player wins the game!";
-    } else if (computerScore > humanScore) {
-      nodeVal.nodeValue = "Computer wins the game!";
-    } else {
-      nodeVal.nodeValue = "Tie! Both sides win!";
-    }
+  } else if (computerScore == 5) {
+    nodeVal.nodeValue = "Computer wins the game!";
+    rock.style.display = "none";
+    paper.style.display = "none";
+    scissors.style.display = "none";
   }
 }
 
@@ -53,31 +51,24 @@ function playRound(humanChoice, computerChoice) {
   results.appendChild(newNode);
   if (humanChoice == computerChoice) {
     newNode.nodeValue = "Tie!";
-    roundCounter += 1;
   } else if (humanChoice == "rock" && computerChoice == "scissors") {
     newNode.nodeValue = "Rock beats scissors! Player wins this round.";
     humanScore += 1;
-    roundCounter += 1;
   } else if (humanChoice == "rock" && computerChoice == "paper") {
     newNode.nodeValue = "Paper beats rock! Computer wins this round.";
     computerScore += 1;
-    roundCounter += 1;
   } else if (humanChoice == "scissors" && computerChoice == "paper") {
     newNode.nodeValue = "Scissors cut paper! Player wins this round.";
-    humanChoice += 1;
-    roundCounter += 1;
+    humanScore += 1;
   } else if (humanChoice == "scissors" && computerChoice == "rock") {
     newNode.nodeValue = "Rock beats scissors! Computer wins this round.";
-    computerChoice += 1;
-    roundCounter += 1;
+    computerScore += 1;
   } else if (humanChoice == "paper" && computerChoice == "scissors") {
     newNode.nodeValue = "Scissors cut paper! Computer wins this round.";
     computerScore += 1;
-    roundCounter += 1;
   } else if (humanChoice == "paper" && computerChoice == "rock") {
     newNode.nodeValue = "Paper beats rock! Player wins this round.";
     humanScore += 1;
-    roundCounter += 1;
   } else {
     newNode.nodeValue = "Something went wrong.";
   }
