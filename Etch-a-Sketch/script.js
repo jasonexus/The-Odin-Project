@@ -10,7 +10,6 @@ const resizeGrid = document.getElementById("resize");
 resizeGrid.addEventListener("click", () => {
   let userSize = prompt("Please enter a size (1-100):");
   newSize = parseInt(userSize);
-
   makeGrid(newSize);
 });
 
