@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 100px 0px 100px;
+  background-color: white;
+}
+
+.cell {
+  border: 1px solid whitesmoke;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
