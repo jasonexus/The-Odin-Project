@@ -118,3 +118,8 @@ body {
 #equals:hover {
   background-color: #cf7c07;
 }
+
+#calc-header {
+  font-weight: 300;
+  text-align: center;
+}
